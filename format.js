@@ -1,4 +1,3 @@
-<<<<<<< format.js
 let map = [
     "wwwwwww",  //botões
     "0000000",
