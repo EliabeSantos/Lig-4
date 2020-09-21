@@ -1,1 +1,1 @@
-hello
+let newDiv = document.createElement('div')
