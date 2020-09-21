@@ -1,3 +1,41 @@
-body {
-  background-color: red;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ccc;
+}
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#board div{
+display: flex;
+flex-direction: row;
+}
+#board{
+  margin-top: 10px;
+}
+#board div div{
+  height: 50px;
+  width: 50px;
+  border-left: 1px solid black;
+}
+#line7{
+  border-bottom: 1px solid black;
+}
+#board div div:last-child{
+  border-right: 1px solid black;
+}
+.button{
+  display: flex;
+  background-image: url(seta2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
