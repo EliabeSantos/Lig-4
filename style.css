@@ -1,5 +1,4 @@
-*{
-
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,10 +7,6 @@ body {
   background-color: #ccc;
 }
 .main {
-body{
-  background-color: #ccc;
-}
-.main{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,42 +15,21 @@ body{
   display: flex;
   flex-direction: row;
 }
-
 #board {
   margin-top: 10px;
 }
-
 #board div div {
-display: flex;
-flex-direction: row;
-}
-
-#board{
-  margin-top: 10px;
-}
-
-#board div div{
   height: 50px;
   width: 50px;
   border-left: 1px solid black;
 }
-
 #line7 {
   border-bottom: 1px solid black;
 }
-
 #board div div:last-child {
   border-right: 1px solid black;
 }
-#line7{
-  border-bottom: 1px solid black;
-}
-
-#board div div:last-child{
-  border-right: 1px solid black;
-}
-
-.button{
+.button {
   display: flex;
   background-image: url(seta2.png);
   background-size: contain;
@@ -65,11 +39,9 @@ flex-direction: row;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-
 .player1 {
   background-color: lightcoral;
 }
-
 .player2 {
   background-color: lightblue;
 }
