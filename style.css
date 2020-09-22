@@ -1,47 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Philosopher', sans-serif;
 }
+
 body {
-  background-color: #ccc;
+  background-image: url(img/background1.png);
+  background-repeat: no-repeat;
 }
+
+
+/* HEADER */
+
+
+/* BACKGROUND */
+
+
+
+/* BOARD */
+
 .main {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 15rem;
+
 }
+
+#board {
+  background-color: rgba(66, 32, 72, 0.8);
+}
+
 #board div {
   display: flex;
   flex-direction: row;
+
 }
-#board {
-  margin-top: 10px;
+
+#board img {
+  width: 90%;
+
 }
-#board div div {
-  height: 50px;
-  width: 50px;
-  border-left: 1px solid black;
-}
-#line7 {
-  border-bottom: 1px solid black;
-}
+
 #board div div:last-child {
   border-right: 1px solid black;
 }
+
+#board div div {
+  width: 50px;
+  height: 50px;
+  border-left: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#board div div div {
+  border: none;
+}
+
+#board div div div:last-child {
+  border: none;
+}
+
+
+#line7 {
+  border-bottom: 1px solid black;
+}
+
+/* PLAYERS */
+
+.player1,
+.player2 {
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-radius: 100%;
+}
+
+.player1 {
+  background-image: url("img/Gryffindor.png");
+  background-size: cover;
+}
+
+.player2 {
+  background-image: url('img/slytherin.png.png');
+  background-size: cover;
+}
+
+/* VICTORY SCREEN */
+
+.blur {
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: blur(8px);
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+  filter: blur(0px);
+}
+
+
+#victoryScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+#victoryButton {
+  padding: 1.5rem 4rem;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#victoryMessage {
+  font-size: 50px;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+
 .button {
   display: flex;
-  background-image: url(seta2.png);
+  background-image: url(img/raio.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  text-align: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
-.player1 {
-  background-color: lightcoral;
-}
-.player2 {
-  background-color: lightblue;
+
+
+/* COUNTER */
+
+
+#count {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translatex(-50%);
+  border: 3px solid white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: white;
 }
