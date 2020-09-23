@@ -37,6 +37,7 @@ function arrayPrint() {
     }
   }
 }
+
 for (let i = 1; i <= 7; i++) {
   button = document.getElementById(`1,${i}`);
   button.addEventListener("click", plays);
@@ -52,7 +53,6 @@ function plays() {
         players++;
         map[i][clickedButton - 1] = players;
         currentPosition = document.getElementById(`${i + 1},${clickedButton}`);
-
         if (players === 1) {
           img.src = "img/Gryffindor.png";
           div.appendChild(img);
@@ -147,7 +147,24 @@ function winCondition() {
       }
     }
   }
+  //Empate
+  let empate = 0
+  for (let i = 1; i<7;i++){
+    for(let j = 0; j<7; j++) {
+      if(map[i][j] !== 0 ){
+        empate++
+      }
+    }
+  }
+  if(empate === 42){
+    victoryText("Draw")
+  }
+
 }
+
+// function empate() {  
+// }
+
 
 function victoryText(p) {
   let victoryText = document.getElementById("victoryMessage");
@@ -191,7 +208,8 @@ function reset() {
     map.push(linha);
     linha = [];
   }
-  arrayPrint();
+
+  arrayPrint();// transformar em um botão.
   for (let i = 1; i <= 7; i++) {
     button = document.getElementById(`1,${i}`);
     button.addEventListener("click", plays);
