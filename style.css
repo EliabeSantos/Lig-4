@@ -271,6 +271,50 @@ body {
   95.2%{
   }
 }
+/* tela selção de casa */
+/* RESET */
+#box {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* TITLE */
+#box h1 {
+  padding: 1.2rem 0;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+/* FLAGS TO CHOOSE */
+#containerx {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+#containerx h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+}
+#containerx div {
+  margin-bottom: 1.8rem;
+}
+@media screen and (min-width: 380px) {
+  #container {
+      max-width: 370px;
+      margin: auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+      max-width: unset;
+  }
+}
+
+
 @media screen and (min-width: 480px){
   #board div div {
     width: 65px;

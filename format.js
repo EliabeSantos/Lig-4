@@ -60,7 +60,7 @@ function plays() {
         currentPosition = document.getElementById(`${i + 1},${clickedButton}`);
         if (players === 1) {
           document.getElementById("player-2").removeAttribute("class", "opposite-turn");
-          img.src = "img/Gryffindor.png";
+          img.src = 'img/discos/'+currentTargetP1+ '.png';
           document.getElementById("player-1").setAttribute("class", "opposite-turn");
           div.appendChild(img);
           currentPosition.appendChild(div);
@@ -70,7 +70,7 @@ function plays() {
     }
     if (players === 2) {
       document.getElementById("player-1").removeAttribute("class", "opposite-turn");
-      img.src = "img/slytherin.png";
+      img.src = 'img/discos/'+currentTargetP2+ '.png';
       document.getElementById("player-2").setAttribute("class", "opposite-turn");
       div.appendChild(img);
       currentPosition.appendChild(div);
@@ -93,11 +93,11 @@ function winCondition() {
       ) {
         if (map[i][j] === 1) {
           playerOneVictories++;
-          victoryText("player one");
+          victoryText(currentTargetP1 + 'Wins');
           victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
-          victoryText("player two");
+          victoryText(currentTargetP2 + 'Wins');
           victory = 1
         }
       }
@@ -114,11 +114,11 @@ function winCondition() {
       )
         if (map[i][j] === 1) {
           playerOneVictories++;
-          victoryText("player one");
+          victoryText(currentTargetP1 + ' Wins');
           victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
-          victoryText("player two");
+          victoryText(currentTargetP2 + ' Wins');
           victory = 1
         }
     }
@@ -134,11 +134,11 @@ function winCondition() {
       ) {
         if (map[i][j] === 1) {
           playerOneVictories++;
-          victoryText("Player one");
+          victoryText(currentTargetP1 + ' Wins');
           victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
-          victoryText("player two");
+          victoryText(currentTargetP2 + ' Wins');
           victory = 1
         }
       }
@@ -155,11 +155,11 @@ function winCondition() {
       ) {
         if (map[i][j] === 1) {
           playerOneVictories++;
-          victoryText("Player one");
+          victoryText(currentTargetP1 + ' Wins');
           victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
-          victoryText("player two");
+          victoryText(currentTargetP2 + ' Wins');
           victory = 1
         }
       }
@@ -235,4 +235,44 @@ function reset() {
   document.getElementById("background").classList.remove("blur");
   document.getElementById("player-2").removeAttribute("class", "opposite-turn");
   document.getElementById("player-1").removeAttribute("class", "opposite-turn");
+}
+
+
+// seleção de casa
+let coount = 0
+let currentTargetP1
+let currentTargetP2
+
+let button1 = document.getElementById('grifinoria')
+let button2 = document.getElementById('sonserina')
+let button3 = document.getElementById('corvinal')
+let button4 = document.getElementById('lufa-lufa')
+
+button1.addEventListener('click', houseSelection)
+button2.addEventListener('click', houseSelection)
+button3.addEventListener('click', houseSelection)
+button4.addEventListener('click', houseSelection)
+
+function houseSelection(){
+  coount++
+  if(coount === 1){
+    currentTargetP1 = this.id
+  }else if(coount === 2){
+    currentTargetP2 = this.id
+  }
+
+  if(currentTargetP1 === currentTargetP2){
+    coount = 1
+  }
+
+  if(currentTargetP1 !== undefined && coount == 1){
+    //mostrar a casa selecionada "Player 1 selecionou casa x"
+    //pedir pro pĺayer2 selecionar sua casa
+    document.getElementById('player-1').src = 'img/discos/'+currentTargetP1+ '.png'
+  }
+  if(currentTargetP2 !== undefined && coount === 2){
+    document.getElementById('player-2').src = 'img/discos/'+currentTargetP2+ '.png'
+    coount = 0
+    //botão para começar o jogo
+  }
 }
