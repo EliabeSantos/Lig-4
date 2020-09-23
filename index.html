@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +7,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <header>
-
-  </header>
-  <main class="main">
-    <div id='board'></div>
-  </main>
+<body id="body">
+  <div id="background">
+    <header class="title-container">
+      <div class="logo">
+        <img src="img/Hogwarts-Logo-PNG-Transparent.png">
+      </div>
+      <div class="icon-logo"></div>
+      <h1>House cup</h1>
+    </header>
+    <div class="count-container">
+      <img id="player-1" src="img/Gryffindor.png">
+        <div id='count'></div>
+      <img id="player-2" src="img/slytherin.png">
+    </div>
+    <main id="main" class="main">
+      <div id='board'></div>
+    </main>
+    <section class="countSection">
+    </section>
+  </div>
+  <section id="victoryScreen">
+    <div id='victoryMessage' class='hidden'></div>
+    <button id='victoryButton' class='hidden'>Click to continue!</button>
+  </section>
+  <footer>
+    <div id="container">
+      
+    </div>
+  </footer>
   <script src="format.js"></script>
 
 </body>
