@@ -20,7 +20,7 @@ let victoryButton = document.getElementById("victoryButton");
 victoryButton.addEventListener("click", reset);
 arrayPrint();
 count();
-
+creatButton();
 function arrayPrint() {
   document.getElementById("board").innerHTML = "";
   for (let line = 1; line <= 7; line++) {
@@ -38,9 +38,14 @@ function arrayPrint() {
   }
 }
 
-for (let i = 1; i <= 7; i++) {
-  button = document.getElementById(`1,${i}`);
-  button.addEventListener("click", plays);
+function creatButton(){
+  for (let i = 1; i <= 7; i++) {
+    let img = document.createElement("img");
+    button = document.getElementById(`1,${i}`);
+    img.src = "img/raio.png";
+    button.appendChild(img);
+    button.addEventListener("click", plays);
+  }
 }
 
 function plays() {
@@ -54,7 +59,9 @@ function plays() {
         map[i][clickedButton - 1] = players;
         currentPosition = document.getElementById(`${i + 1},${clickedButton}`);
         if (players === 1) {
+          document.getElementById("player-2").removeAttribute("class", "opposite-turn");
           img.src = "img/Gryffindor.png";
+          document.getElementById("player-1").setAttribute("class", "opposite-turn");
           div.appendChild(img);
           currentPosition.appendChild(div);
         }
@@ -62,7 +69,9 @@ function plays() {
       }
     }
     if (players === 2) {
+      document.getElementById("player-1").removeAttribute("class", "opposite-turn");
       img.src = "img/slytherin.png";
+      document.getElementById("player-2").setAttribute("class", "opposite-turn");
       div.appendChild(img);
       currentPosition.appendChild(div);
       players = 0;
@@ -73,6 +82,7 @@ function plays() {
 
 function winCondition() {
   // horizontal
+  let victory = 0
   for (let i = 1; i < map.length; i++) {
     for (let j = 0; j < 4; j++) {
       if (
@@ -84,9 +94,11 @@ function winCondition() {
         if (map[i][j] === 1) {
           playerOneVictories++;
           victoryText("player one");
+          victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
           victoryText("player two");
+          victory = 1
         }
       }
     }
@@ -103,9 +115,11 @@ function winCondition() {
         if (map[i][j] === 1) {
           playerOneVictories++;
           victoryText("player one");
+          victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
           victoryText("player two");
+          victory = 1
         }
     }
   }
@@ -121,9 +135,11 @@ function winCondition() {
         if (map[i][j] === 1) {
           playerOneVictories++;
           victoryText("Player one");
+          victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
           victoryText("player two");
+          victory = 1
         }
       }
     }
@@ -140,9 +156,11 @@ function winCondition() {
         if (map[i][j] === 1) {
           playerOneVictories++;
           victoryText("Player one");
+          victory = 1
         } else if (map[i][j] === 2) {
           playerTwoVictories++;
           victoryText("player two");
+          victory = 1
         }
       }
     }
@@ -156,15 +174,10 @@ function winCondition() {
       }
     }
   }
-  if(empate === 42){
+  if(empate === 42 && victory === 0){
     victoryText("Draw")
   }
-
 }
-
-// function empate() {  
-// }
-
 
 function victoryText(p) {
   let victoryText = document.getElementById("victoryMessage");
@@ -210,10 +223,7 @@ function reset() {
   }
 
   arrayPrint();// transformar em um botão.
-  for (let i = 1; i <= 7; i++) {
-    button = document.getElementById(`1,${i}`);
-    button.addEventListener("click", plays);
-  }
+  creatButton()
   // RETURN TO PLAY SCREEN
   victoryCondition = 0;
 
@@ -223,4 +233,6 @@ function reset() {
   document.getElementById("count").classList.remove("blur");
   document.getElementById("main").classList.remove("blur");
   document.getElementById("background").classList.remove("blur");
+  document.getElementById("player-2").removeAttribute("class", "opposite-turn");
+  document.getElementById("player-1").removeAttribute("class", "opposite-turn");
 }
