@@ -263,7 +263,7 @@ body {
 }
 /* tela selção de casa */
 /* RESET */
-#start-menu {
+#box {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
@@ -272,7 +272,7 @@ body {
   overflow: hidden;
 }
 /* TITLE */
-#start-menu h1 {
+#box h1 {
   padding: 0.5rem;
   font-size: 2rem;
   text-align: center;
@@ -280,22 +280,21 @@ body {
   font-weight: bold;
 }
 /* FLAGS TO CHOOSE */
-#flags-container {
+#containerx {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
 }
-#flags-container img{
+#containerx img{
   height: 40vh;
-  cursor: pointer;
 }
-#flags-container h2 {
+#containerx h2 {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: white;
 }
-#flags-container div {
+#containerx div {
   margin-bottom: 1.8rem;
 }
 .start-container{
@@ -313,37 +312,33 @@ body {
   bottom: 2%;
   right: 3%;
   outline-style: none;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 310px) {
-  #flags-container {
+  #containerx {
       max-width: 310px;
       margin: auto;
   }
 }
 @media screen and (min-width: 600px) {
-  #flags-container {
+  #containerx {
       max-width: unset;
       height: 60vh;
   }
-  #flags-container img{
-    height: 60vh;
+  .containerx > img{
+    width: 400px;
+    height: 90vh;
   }
   .start-Game{
-    border-radius: 50px;
     margin: auto;
     position: unset;
-    width: 200px;
-    height: 80px;
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-top: 2rem;
+    width: 150px;
+  height: 150px;
   }
-  #start-menu{
+  #box{
     height: 100vh;
   }
-  #start-menu > h1{
+  #box > h1{
     padding: 1.5rem;
   }
 }

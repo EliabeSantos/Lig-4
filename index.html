@@ -8,34 +8,59 @@
 </head>
 
 <body id="body">
-  <div id="background">
-    <header class="title-container">
-      <div class="logo">
-        <img src="img/Hogwarts-Logo-PNG-Transparent.png">
+<!-- Tela seleção de casa -->
+  <section id='start-menu'>
+    <h1>Selecione sua casa</h1>
+        <div id='flags-container'>
+            <div id ='grifinoria'>
+                <h2>Grifinória</h2>
+                <img class='selectImg' id='grifinoriaImg' src="img/grifinoria.png">
+            </div>
+            <div id ='sonserina'>
+                <h2>Sonserina</h2>
+                <img class='selectImg' id='sonserinaImg' src="img/sonserina.png">
+            </div>
+            <div id ='lufa-lufa'>
+                <h2>Lufa-Lufa</h2>
+                <img class='selectImg' id='lufa-LufaImg' src="img/lufa-lufa.png">
+            </div>
+            <div id ='corvinal'>
+                <h2>Corvinal</h2>
+                <img class='selectImg' id='corvinalImg' src="img/corvinal.png">
+            </div>
+        </div>
+        <div class="start-container">  
+          <button id="start-Game" class="start-Game">Comecar o jogo</button> 
+        </div>
+  </section> 
+<div class="hidden">
+    <div id="background">
+      <header class="title-container">
+        <div class="logo">
+          <img src="img/Hogwarts-Logo-PNG-Transparent.png">
+        </div>
+        <div class="icon-logo"></div>
+        <h1>House cup</h1>
+      </header>
+      <div class="count-container">
+        <img id="player-1">
+          <div id='count'></div>
+        <img id="player-2">
       </div>
-      <div class="icon-logo"></div>
-      <h1>House cup</h1>
-    </header>
-    <div class="count-container">
-      <img id="player-1" src="img/Gryffindor.png">
-        <div id='count'></div>
-      <img id="player-2" src="img/slytherin.png">
+      <main id="main" class="main">
+        <div id='board'></div>
+      </main>
+      <section class="countSection">
+      </section>
     </div>
-    <main id="main" class="main">
-      <div id='board'></div>
-    </main>
-    <section class="countSection">
+    <section id="victoryScreen">
+      <div id='victoryMessage' class='hidden'></div>
+      <button id='victoryButton' class='hidden'>Click to continue!</button>
     </section>
+    <footer>
+      <div id="container"></div>
+    </footer>
   </div>
-  <section id="victoryScreen">
-    <div id='victoryMessage' class='hidden'></div>
-    <button id='victoryButton' class='hidden'>Click to continue!</button>
-  </section>
-  <footer>
-    <div id="container">
-      
-    </div>
-  </footer>
   <script src="format.js"></script>
 
 </body>
