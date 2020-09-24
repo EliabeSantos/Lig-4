@@ -216,7 +216,6 @@ function reset() {
         linha.push("w");
       } else {
         linha.push(0);
->>>>>>> format.js
       }
     }
     map.push(linha);
