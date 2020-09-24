@@ -323,6 +323,7 @@ buttonToStart.addEventListener("click", function () {
   playerTwoVictories = 0;
   count();
   reset();
+  document.getElementById("player-2").classList.add("class", "opposite-turn");
 });
 
 let buttonToMenu = document.getElementById("menu-Game");
