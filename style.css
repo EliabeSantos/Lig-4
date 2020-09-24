@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-
-
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -125,16 +123,6 @@ body {
   border-left: 0px !important;
   border-right: 0px !important;
   border-radius: 100%;
-}
-
-.player1 {
-  background-image: url("img/Gryffindor.png");
-  background-size: cover;
-}
-
-.player2 {
-  background-image: url('img/slytherin.png.png');
-  background-size: cover;
 }
 
 /* VICTORY SCREEN */
@@ -273,48 +261,90 @@ body {
 }
 /* tela selção de casa */
 /* RESET */
-#box {
+#start-menu {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
   background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  overflow: hidden;
 }
 /* TITLE */
-#box h1 {
-  padding: 1.2rem 0;
+#start-menu h1 {
+  padding: 0.5rem;
   font-size: 2rem;
   text-align: center;
   color: white;
+  font-weight: bold;
 }
 /* FLAGS TO CHOOSE */
-#containerx {
+#flags-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
 }
-#containerx h2 {
+#flags-container img{
+  height: 40vh;
+  cursor: pointer;
+}
+#flags-container h2 {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: white;
 }
-#containerx div {
+#flags-container div {
   margin-bottom: 1.8rem;
 }
-@media screen and (min-width: 380px) {
-  #container {
-      max-width: 370px;
-      margin: auto;
-  }
+.start-container{
+  display: flex;
+  justify-content: center;
+}
+.start-Game{
+  width: 90px;
+  height: 90px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  position: fixed;
+  border: 1px solid white;
+  border-radius: 100%;
+  bottom: 2%;
+  right: 3%;
+  outline-style: none;
+  cursor: pointer;
 }
 
+@media screen and (min-width: 310px) {
+  #flags-container {
+    max-width: 310px;
+    margin: auto;
+  
+}
 @media screen and (min-width: 600px) {
-  #container {
-      max-width: unset;
+  #flags-container {
+    max-width: unset;
+    height: 60vh;
+  }
+  #flags-container img{
+    height: 60vh;
+  }
+  .start-Game{
+    border-radius: 50px;
+    margin: auto;
+    position: unset;
+    width: 200px;
+    height: 80px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+  #start-menu{
+    height: 100vh;
+  }
+  #start-menu > h1{
+    padding: 1.5rem;
   }
 }
-
-
 @media screen and (min-width: 480px){
   #board div div {
     width: 65px;
@@ -331,4 +361,3 @@ body {
     width: 35px;
     height: 40px;
   }
-}
