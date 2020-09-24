@@ -88,6 +88,7 @@ body{
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  color: white;
 }
 #creditos a:hover{
   text-shadow: 0 0 15px white;
