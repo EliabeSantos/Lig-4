@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-
-
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -318,14 +316,14 @@ body {
 
 @media screen and (min-width: 310px) {
   #flags-container {
-      max-width: 310px;
-      margin: auto;
-  }
+    max-width: 310px;
+    margin: auto;
+  
 }
 @media screen and (min-width: 600px) {
   #flags-container {
-      max-width: unset;
-      height: 60vh;
+    max-width: unset;
+    height: 60vh;
   }
   #flags-container img{
     height: 60vh;
@@ -363,4 +361,3 @@ body {
     width: 35px;
     height: 40px;
   }
-}

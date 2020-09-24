@@ -216,6 +216,108 @@ function reset() {
         linha.push("w");
       } else {
         linha.push(0);
+>>>>>>> format.js
+      }
+    }
+    map.push(linha);
+    linha = [];
+  }
+
+  arrayPrint();// transformar em um botão.
+  creatButton()
+  // RETURN TO PLAY SCREEN
+  victoryCondition = 0;
+
+  //REMOVE STYLE FROM VICTORY SCREEN
+  victoryButton.classList.add("hidden");
+  victoryMessage.classList.add("hidden");
+  document.getElementById("count").classList.remove("blur");
+  document.getElementById("main").classList.remove("blur");
+  document.getElementById("background").classList.remove("blur");
+  document.getElementById("player-2").removeAttribute("class", "opposite-turn");
+  document.getElementById("player-1").removeAttribute("class", "opposite-turn");
+}
+
+
+// seleção de casa
+let coount = 0
+let currentTargetP1
+let currentTargetP2
+
+let button1 = document.getElementById('grifinoria')
+let button2 = document.getElementById('sonserina')
+let button3 = document.getElementById('corvinal')
+let button4 = document.getElementById('lufa-lufa')
+
+button1.addEventListener('click', houseSelection)
+button2.addEventListener('click', houseSelection)
+button3.addEventListener('click', houseSelection)
+button4.addEventListener('click', houseSelection)
+
+function houseSelection(){
+  coount++
+  if(coount === 1){
+    currentTargetP1 = this.id
+  }else if(coount === 2){
+    currentTargetP2 = this.id
+  }
+
+  if(currentTargetP1 === currentTargetP2){
+    coount = 1
+  }
+
+  if(currentTargetP1 !== undefined && coount == 1){
+    //mostrar a casa selecionada "Player 1 selecionou casa x"
+    //pedir pro pĺayer2 selecionar sua casa
+    document.getElementById('player-1').src = 'img/discos/'+currentTargetP1+ '.png'
+  }
+  if(currentTargetP2 !== undefined && coount === 2){
+    document.getElementById('player-2').src = 'img/discos/'+currentTargetP2+ '.png'
+    coount = 0
+    //botão para começar o jogo
+  }
+  if(empate === 42 && victory === 0){
+    victoryText("Draw")
+  }
+}
+
+function victoryText(p) {
+  let victoryText = document.getElementById("victoryMessage");
+  victoryText.innerHTML = "";
+  let paragraph = document.createElement("p");
+  paragraph.innerHTML = p;
+  victoryText.appendChild(paragraph);
+
+  //ADD STYLE FROM VICTORY SCREEN
+  victoryButton.classList.remove("hidden");
+  victoryMessage.classList.remove("hidden");
+  document.getElementById("count").classList.add("blur");
+  document.getElementById("main").classList.add("blur");
+  document.getElementById("background").classList.add("blur");
+  
+  // VAR TO STOP MOVEMENT AT VICTORY SCREEN
+  victoryCondition++;
+
+  count();
+}
+
+function count() {
+  let countText = document.getElementById("count");
+  countText.innerHTML = "";
+  let countParagraph = document.createElement("p");
+  countParagraph.innerHTML = playerOneVictories + " x " + playerTwoVictories;
+  countText.appendChild(countParagraph);
+}
+
+function reset() {
+  map = [];
+  let linha = [];
+  for (let i = 0; i < 7; i++) {
+    for (let j = 0; j < 7; j++) {
+      if (i === 0) {
+        linha.push("w");
+      } else {
+        linha.push(0);
       }
     }
     map.push(linha);
