@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
 }
 
 body {
   background-image: url(img/background1.png);
   background-repeat: no-repeat;
+  background-position-x: center;
+  background-color: #0f141a;
 }
 
-
 /* HEADER */
-.title-container{
+.title-container {
   width: 100%;
   height: 90px;
   /* padding: 10px; */
@@ -24,25 +26,25 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.logo{
+.logo {
   width: 100%;
   height: 30px;
   margin: 0;
   background-color: #0f141a;
 }
-.logo img{
+.logo img {
   height: 40px;
   margin: 5px 0 5px 0;
 }
-.count-container:hover{
+.count-container:hover {
   background-color: #0f141a;
   transition: 1s;
 }
-.title-container h1{
+.title-container h1 {
   margin-top: 10px;
   text-transform: uppercase;
 }
-.count-container{
+.count-container {
   width: 100%;
   text-align: center;
   justify-content: space-around;
@@ -51,15 +53,13 @@ body {
   background-color: #23263285;
   padding: 10px;
 }
-.count-container img{
+.count-container img {
   height: 90px;
   margin-top: 10px;
   border: 2px solid white;
   border-radius: 100%;
 }
 /* BACKGROUND */
-
-
 
 /* BOARD */
 
@@ -72,8 +72,8 @@ body {
 }
 
 #board {
-  background: rgb(35,38,50);
-  background: linear-gradient(90deg, rgba(35,38,50,1) 0%, rgba(168,125,61,0.6979166666666667) 50%, rgba(35,38,50,1) 100%);
+  background: rgb(26,106,13);
+  background: linear-gradient(90deg, rgba(26,106,13,0.9) 0%, rgba(0,0,0,0) 50%, rgba(76,94,8,0.9) 100%);
 }
 
 #board div {
@@ -96,7 +96,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 
 #board div div div {
   border: none;
@@ -138,14 +137,12 @@ body {
   filter: blur(0px);
 }
 
-
 #victoryScreen {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-
 }
 
 #victoryButton {
@@ -154,14 +151,14 @@ body {
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
-  background: #0a2d59c7;
+  background: #4a558980;
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
-#victoryButton:hover{
-  background: #02162fd9;
-  color:white;
+#victoryButton:hover {
+  background: #4a5589;
+  color: white;
   font-size: 20px;
   font-weight: bold;
 }
@@ -172,25 +169,23 @@ body {
   color: white;
 }
 
-
-.button{
+.button {
   display: flex;
   /* background-image: url(img/raio.png); */
   border-top: 3px solid #0f141a;
   border-bottom: 3px solid #0f141a;
   cursor: pointer;
 }
-.button > img{
+.button > img {
   width: 40%;
 }
-.button img:hover{
+.button img:hover {
   animation: yourAnimation 1s ease 0s normal none;
 }
-.opposite-turn{
+.opposite-turn {
   filter: grayscale(100%);
 }
 /* COUNTER */
-
 
 #count {
   max-width: 200px;
@@ -199,69 +194,89 @@ body {
   border-radius: 10px;
   color: white;
 }
-
+#victoryImg{
+  height: 200px;
+}
+#harry{
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+}
+#harry img{
+  height: 300px;
+}
+#hermione{
+  display: none;
+  position: absolute;
+  right: 20%;
+  top: 45%;
+}
+#hermione img{
+  height: 300px;
+}
 /* animation */
 @keyframes yourAnimation {
-  0.0%{
+  0.0% {
   }
-  10.3%{
-      transform: rotate(-10deg);
+  10.3% {
+    transform: rotate(-10deg);
   }
-  100%{
+  100% {
   }
-  15.2%{
+  15.2% {
   }
-  20.2%{
-      transform: rotate(15deg);
+  20.2% {
+    transform: rotate(15deg);
   }
-  25.3%{
-      transform: rotate(-15deg);
+  25.3% {
+    transform: rotate(-15deg);
   }
-  29.7%{
+  29.7% {
   }
-  35.4%{
-      transform: rotate(20deg);
+  35.4% {
+    transform: rotate(20deg);
   }
-  40.3%{
-      transform: rotate(-20deg);
+  40.3% {
+    transform: rotate(-20deg);
   }
-  45.4%{
+  45.4% {
   }
-  49.6%{
-      transform: rotate(5deg);
+  49.6% {
+    transform: rotate(5deg);
   }
-  5.0%{
-      transform: rotate(10deg);
+  5.0% {
+    transform: rotate(10deg);
   }
-  55.0%{
-      transform: rotate(-5deg);
+  55.0% {
+    transform: rotate(-5deg);
   }
-  59.5%{
-      transform: rotate(20deg);
+  59.5% {
+    transform: rotate(20deg);
   }
-  64.6%{
-      transform: rotate(-20deg);
+  64.6% {
+    transform: rotate(-20deg);
   }
-  70.3%{
+  70.3% {
   }
-  74.5%{
-      transform: rotate(-1deg);
+  74.5% {
+    transform: rotate(-1deg);
   }
-  79.7%{
-      transform: rotate(1deg);
+  79.7% {
+    transform: rotate(1deg);
   }
-  84.6%{
-      transform: rotate(15deg);
+  84.6% {
+    transform: rotate(15deg);
   }
-  90.1%{
-      transform: rotate(-15deg);
+  90.1% {
+    transform: rotate(-15deg);
   }
-  95.2%{
+  95.2% {
   }
 }
 /* tela selção de casa */
 /* RESET */
-#start-menu {
+#menuScreen {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
@@ -270,7 +285,7 @@ body {
   overflow: hidden;
 }
 /* TITLE */
-#start-menu h1 {
+#menuScreen h1 {
   padding: 0.5rem;
   font-size: 2rem;
   text-align: center;
@@ -284,7 +299,7 @@ body {
   justify-content: space-evenly;
   text-align: center;
 }
-#flags-container img{
+#flags-container img {
   height: 40vh;
   cursor: pointer;
 }
@@ -296,17 +311,23 @@ body {
 #flags-container div {
   margin-bottom: 1.8rem;
 }
-.start-container{
+.start-container {
   display: flex;
   justify-content: center;
 }
-.start-Game{
-  width: 90px;
-  height: 90px;
-  background-color: rgba(0,0,0,0.5);
+
+.menu-Game {
+  position: absolute;
+}
+
+.menu-Game,
+.start-Game {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: fixed;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 100%;
   bottom: 2%;
   right: 3%;
@@ -314,38 +335,78 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 310px) {
+.menu-Game {
+  border: unset;
+}
+
+.selectImg {
+  filter: grayscale(80%);
+}
+
+/* TELA DE CELL */
+@media screen and (min-width: 328px) {
   #flags-container {
     max-width: 310px;
     margin: auto;
-  
+  }
 }
-@media screen and (min-width: 600px) {
+/* TELA DE PC */
+@media screen and (min-width: 650px) {
   #flags-container {
     max-width: unset;
     height: 60vh;
+    margin-top: 1%;
   }
-  #flags-container img{
-    height: 60vh;
+
+  h2 {
+    margin-bottom: 2rem;
   }
-  .start-Game{
-    border-radius: 50px;
-    margin: auto;
+
+  #flags-container img {
+    height: 40vh;
+  }
+  .menu-Game,
+  .start-Game {
+    border-radius: unset;
     position: unset;
+    margin: auto;
     width: 200px;
     height: 80px;
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 2rem;
   }
-  #start-menu{
+  #menuScreen {
     height: 100vh;
   }
-  #start-menu > h1{
+  #menuScreen > h1 {
     padding: 1.5rem;
   }
+
+  .menu-Game {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    margin: 0;
+    border: none;
+    background: unset;
+    width: 10px;
+    height: 10px;
+  }
+
+  .start-Game {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: 5rem;
+  }
+  .start-Game i:hover {
+    transform: scale(1.5);
+    transition: transform 0.2s;
+  }
 }
-@media screen and (min-width: 480px){
+/* BANDEIRAS RESPONSIVAS */
+@media screen and (min-width: 480px) {
   #board div div {
     width: 65px;
     height: 60px;
@@ -353,11 +414,50 @@ body {
   #count {
     padding: 14px 25px;
     border-radius: 10px;
-    font-size: 25px
+    font-size: 25px;
   }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
   #board div div {
     width: 35px;
     height: 40px;
   }
+}
+
+@media screen and (max-height: 775px) {
+  .menu-Game {
+    position: unset;
+    border: none;
+    background: unset;
+  }
+
+  .count-container img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (min-width: 910px){
+  #flags-container img {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1300px){
+  #harry{
+    display: unset;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+  }
+  #harry img{
+    height: 300px;
+  }
+  #hermione{
+    display: unset;
+    position: absolute;
+    right: 15%;
+    top: 45%;
+  }
+  #hermione img{
+    height: 300px;
+  }
+}

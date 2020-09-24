@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7ed7a27080.js" crossorigin="anonymous"></script>
+  <title>lig 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+  <!-- Tela seleção de casa -->
+  <section id='menuScreen'>
+    <h1>Selecione sua casa</h1>
+    <div id='flags-container'>
+      <div id='grifinoria'>
+        <h2>Grifinória</h2>
+        <img class='selectImg' id='grifinoriaImg' src="img/grifinoria.png">
+      </div>
+      <div id='sonserina'>
+        <h2>Sonserina</h2>
+        <img class='selectImg' id='sonserinaImg' src="img/sonserina.png">
+      </div>
+      <div id='lufa-lufa'>
+        <h2>Lufa-Lufa</h2>
+        <img class='selectImg' id='lufa-lufaImg' src="img/lufa-lufa.png">
+      </div>
+      <div id='corvinal'>
+        <h2>Corvinal</h2>
+        <img class='selectImg' id='corvinalImg' src="img/corvinal.png">
+      </div>
+    </div>
+    <div class="start-container">
+      <button id="start-Game" class="hidden start-Game"><i class="fas fa-play-circle fa-3x"></i></button>
+    </div>
+  </section>
+
+  <!-- Tela de jogo -->
+  <div id='gameScreen' class="hidden">
+    <div id="background">
+      <header class="title-container">
+        <div class="logo">
+          <img src="img/Hogwarts-Logo-PNG-Transparent.png">
+        </div>
+        <div class="icon-logo"></div>
+        <h1>House cup</h1>
+      </header>
+      <div class="count-container">
+        <img id="player-1" width="90px">
+        <div id='count'></div>
+        <img id="player-2" width="90px">
+      </div>
+      <div id="hermione">
+        <img src="img/hermione.gif" alt="">
+      </div>
+      <main id="main" class="main">
+        <div id='board'></div>
+      </main>
+      <div id="harry">
+        <img src="img/harry.gif" alt="">
+      </div>
+    </div>
+    <section id="victoryScreen">
+      <img  id="victoryImg" class='hidden' src="img/dumbledor.png" alt="">
+      <div id='victoryMessage' class='hidden'></div>
+      <button id='victoryButton' class='hidden'>Pressione para continuar!
+      </button>
+    </section>
+
+    <!-- botão pra arrumar! -->
+    <button id="menu-Game" class='menu-Game'><i class="far fa-arrow-alt-circle-left fa-3x"></i></button>
+    <footer id='footer'>
+      <!-- preencher na tela de vitória -->
+    </footer>
+  </div>
+  <script src="format.js"></script>
+
+</body>
+
+</html>
